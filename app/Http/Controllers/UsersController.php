@@ -33,6 +33,7 @@ class UsersController extends Controller
         ]);
 
         // 注册成功自动登录
+        // 已认证通过的用户实例进行登录，记录登录信息
         Auth::login($user);
 
         session()->flash('success', '欢迎，您将在这里开启一段新的旅程~');
